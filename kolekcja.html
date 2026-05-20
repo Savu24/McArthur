@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kolekcja — McArthur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__brand" data-brand>McArthur</a>
+  <span class="nav__sep"></span>
+  <ul class="nav__list">
+    <li><a href="index.html"    data-p="home">Start</a></li>
+    <li><a href="o-marce.html"  data-p="omarce">O marce</a></li>
+    <li><a href="kolekcja.html" data-p="kolekcja">Kolekcja</a></li>
+    <li><a href="kontakt.html"  data-p="kontakt">Kontakt</a></li>
+  </ul>
+  <button class="nav__ham" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="index.html">Start</a>
+  <a href="o-marce.html">O marce</a>
+  <a href="kolekcja.html">Kolekcja</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
+
+<!-- ══ PAGE HEADER ══ -->
+<header class="pghead">
+  <div class="pghead__inner">
+    <p class="pghead__eye">Nasze produkty</p>
+    <h1 class="pghead__h" id="cl-title">Kolekcja</h1>
+    <p class="pghead__sub">podtytuł strony</p>
+  </div>
+</header>
+
+<!-- ══ PRODUKTY ══ -->
+<section class="section">
+  <div class="section__wrap">
+    <div class="coll__head fi-in">
+      <p class="eyebrow">Wszystkie modele</p>
+      <span class="coll__cnt" id="cl-cnt"></span>
+    </div>
+    <div class="coll__grid" id="cl-grid"></div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <a href="index.html" class="foot__brand" data-brand>McArthur</a>
+  <span class="foot__copy">
+    Obuwie premium &nbsp;·&nbsp; Warszawa &nbsp;·&nbsp;
+    <span class="foot__year" id="ft-year" title="Panel admina: kliknij 3×">2025</span>
+  </span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

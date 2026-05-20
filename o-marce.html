@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O marce — McArthur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__brand" data-brand>McArthur</a>
+  <span class="nav__sep"></span>
+  <ul class="nav__list">
+    <li><a href="index.html"    data-p="home">Start</a></li>
+    <li><a href="o-marce.html"  data-p="omarce">O marce</a></li>
+    <li><a href="kolekcja.html" data-p="kolekcja">Kolekcja</a></li>
+    <li><a href="kontakt.html"  data-p="kontakt">Kontakt</a></li>
+  </ul>
+  <button class="nav__ham" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob" id="mob">
+  <a href="index.html">Start</a>
+  <a href="o-marce.html">O marce</a>
+  <a href="kolekcja.html">Kolekcja</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
+
+<!-- ══ PAGE HEADER ══ -->
+<header class="pghead">
+  <div class="pghead__inner">
+    <p class="pghead__eye">Nasza historia</p>
+    <h1 class="pghead__h" id="ab-title">O marce</h1>
+    <p class="pghead__sub">podtytuł strony</p>
+  </div>
+</header>
+
+<!-- ══ HISTORIA ══ -->
+<section class="section">
+  <div class="section__wrap">
+    <div class="about__cols fi-in">
+      <div class="about__text">
+        <p class="eyebrow">Kim jesteśmy</p>
+        <h2 class="section__h" style="margin-bottom:2rem">Historia<br><em style="font-style:italic;font-weight:300">McArthur</em></h2>
+        <p id="ab-d1">McArthur to polska marka obuwnicza z ponad trzydziestoletnią tradycją. Każda para butów powstaje w naszej rodzinnej manufakturze w Radomiu, gdzie tradycyjne rzemiosło spotyka się z nowoczesnym designem.</p>
+        <p id="ab-d2" style="margin-top:1.25rem">Założona w 1987 roku przez Jana McArthura firma od początku stawiała na jakość ponad ilość. Dziś, w trzecim pokoleniu, kontynuujemy tę filozofię — tworząc obuwie dla osób, które wiedzą, czego chcą.</p>
+      </div>
+      <div class="about__aside">
+        <blockquote class="about__quote">cytat założyciela</blockquote>
+        <cite class="about__cite">autor cytatu</cite>
+        <span class="about__year">1987</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WARTOŚCI ══ -->
+<section class="section section--alt">
+  <div class="section__wrap">
+    <div class="fi-in" style="margin-bottom:3rem">
+      <p class="eyebrow">Co nas wyróżnia</p>
+      <h2 class="section__h">Nasze wartości</h2>
+    </div>
+    <div class="values fi-in" id="vals"></div>
+  </div>
+</section>
+
+<!-- ══ STRIP ══ -->
+<div class="strip">
+  <div class="strip__inner">
+    <p class="strip__quote"><em>slogan sekcji</em></p>
+    <div class="strip__cta">
+      <a href="kolekcja.html" class="link-arrow">
+        Zobacz kolekcję
+        <svg fill="none" viewBox="0 0 13 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 6.5h9M8 3l3.5 3.5L8 10"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <a href="index.html" class="foot__brand" data-brand>McArthur</a>
+  <span class="foot__copy">
+    Obuwie premium &nbsp;·&nbsp; Warszawa &nbsp;·&nbsp;
+    <span class="foot__year" id="ft-year" title="Panel admina: kliknij 3×">2025</span>
+  </span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

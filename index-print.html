@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>McArthur — Obuwie Premium</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ─── PRINT BASE ─── */
+* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+/* ─── HIDE SCREEN-ONLY ELEMENTS ─── */
+#bar, .nav, .mob, .adm, .adm-ov, .adm-btn,
+.nav__ham, .hero__cta, .link-arrow, .strip__cta { display: none !important; }
+
+/* ─── RESET SCROLL/ANIMATION ─── */
+.fi-in { opacity: 1 !important; transform: none !important; }
+html { scroll-behavior: auto; }
+
+/* ─── PAGE WRAPPER ─── */
+body { background: var(--bg); }
+
+/* ─── PAGE 1: HERO ─── */
+#hero {
+  display: grid !important;
+  grid-template-columns: 55fr 45fr !important;
+  width: 100vw;
+  height: 100vh;
+  page-break-after: always;
+  break-after: page;
+}
+.hero__text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 5rem 4rem !important;
+}
+.hero__h1  { font-size: 7rem !important; line-height: .9 !important; }
+.hero__eye { margin-bottom: 1.5rem !important; }
+.hero__sub { font-size: 1.25rem !important; }
+.hero__visual img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* ─── PAGE 2: STRIP + COLLECTION ─── */
+.strip {
+  page-break-before: always;
+  break-before: page;
+  padding: 3rem 4rem !important;
+}
+.strip__inner { max-width: none !important; }
+.strip__quote { font-size: 2.5rem !important; }
+
+.section.section--alt {
+  padding: 3.5rem 4rem !important;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.coll__grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: .875rem !important;
+}
+.card { page-break-inside: avoid; break-inside: avoid; }
+.card__img { aspect-ratio: 4/3 !important; }
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 1.5rem 4rem !important;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  #hero {
+    height: 100vh;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .strip {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .card { page-break-inside: avoid; break-inside: avoid; }
+  footer { page-break-inside: avoid; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 — HERO -->
+<section id="hero">
+  <div class="hero__text">
+    <p class="hero__eye" id="h-eye">eyebrow</p>
+    <h1 class="hero__h1" data-brand>McArthur</h1>
+    <p class="hero__sub" id="h-sub">tagline</p>
+  </div>
+  <div class="hero__visual">
+    <img id="h-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80&auto=format&fit=crop" alt="McArthur">
+  </div>
+</section>
+
+<!-- PAGE 2 — STRIP + COLLECTION + FOOTER -->
+<div class="strip">
+  <div class="strip__inner">
+    <p class="strip__quote"><em>slogan marki</em></p>
+  </div>
+</div>
+
+<section class="section section--alt">
+  <div class="section__wrap">
+    <div class="coll__head" style="margin-bottom:2rem">
+      <div>
+        <p class="eyebrow">Wybrane modele</p>
+        <h2 class="section__h" id="cl-title">Kolekcja</h2>
+      </div>
+      <span class="coll__cnt" id="cl-cnt"></span>
+    </div>
+    <div class="coll__grid" id="cl-grid" data-limit="4"></div>
+  </div>
+</section>
+
+<footer>
+  <span class="foot__brand" data-brand>McArthur</span>
+  <span class="foot__copy">Obuwie premium &nbsp;·&nbsp; Warszawa &nbsp;·&nbsp; <span id="ft-year">2026</span></span>
+</footer>
+
+<script src="app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // wait for fonts + images + JS render
+  Promise.all([
+    document.fonts.ready,
+    new Promise(function(res) { setTimeout(res, 700); })
+  ]).then(function () { window.print(); });
+});
+</script>
+</body>
+</html>
